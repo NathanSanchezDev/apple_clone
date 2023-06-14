@@ -1,4 +1,22 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -6,15 +24,41 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   vertical-align: baseline;
 }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
-
-*, *:before, *:after {
-  box-sizing: border-box;
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
+/*            End of CSS Reset            */
+
+/*                 Setup                  */
+
+/*               Borderbox                */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* clearfix */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
@@ -26,24 +70,84 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   clear: both;
   *zoom: 1;
 }
-
+/*               End of Setup             */
 nav {
-  background-color: #333;
-  z-index: 9999;
-  top: 0;
+  background: rgba(0,0,0,0.8);
   height: 44px;
-  width: 100%;
-  position: relative;
-  word-spacing: 60px;
-  padding-left: 80mm;
 }
-#navex:hover {
+.nav-icons {
+  height: 44px;
+}
+.nav-icons:hover{
   opacity: 0.44;
   transition: 0.5s;
 }
+nav ul {
+  height: 44px;
+}
+nav li {
+  display: inline-block;
+  vertical-align: top;
+  height: 44px;
+  text-align: center;
+  width: 10%;
+}
+#nav-logo {
+  width: 40px;
+  background: url(images/navbar/apple-icon.png) 50% 50% no-repeat;
+}
+#nav-1 {
+  width: 47.5px;
+  background: url(images/navbar/mac.png) 50% 50% no-repeat;
+}
+#nav-2 {
+  width: 46.7px;
+  background: url(images/navbar/ipad.png) 50% 50% no-repeat;
+}
+#nav-3 {
+  width: 62.7px;
+  background: url(images/navbar/iphone.png) 50% 50% no-repeat;
+}
+#nav-4 {
+  width: 59.1px;
+  background: url(images/navbar/watch.png) 50% 50% no-repeat;
+}
+#nav-5 {
+  width: 37px;
+  background: url(images/navbar/tv.png) 50% 50% no-repeat;
+}
+#nav-6 {
+  width: 55px;
+  background: url(images/navbar/music.png) 50% 50% no-repeat;
+}
+#nav-7 {
+  width: 70px;
+  background: url(images/navbar/support.png) 50% 50% no-repeat;
+}
+#nav-8 {
+  width: 40px;
+  background: url(images/navbar/search.png) 50% 50% no-repeat;
+}
+#nav-9 {
+  width: 40px;
+  background: url(images/navbar/shop.png) 50% 50% no-repeat;
+}
+nav a {
+  width: 9.5%;
+  display: inline-block;
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+}
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
 
 .hero {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .hero h1 {
@@ -66,14 +170,14 @@ nav {
 }
 
 #product-info {
-  text-align: center;
+    margin-top: 40px;
+    text-align: center;
 }
 
 #product-picture {
-  background: url(images/hero_iphone_13pro_alternative.jpg) center no-repeat;
-  height: 600px;
-  top: 0;
-  margin-top: -200px;
+    background: url(./images/hero_iphone_13pro_alternative.jpg) center no-repeat;
+    height: 600px;
+    margin-top: -170px;
 }
 
 body {
@@ -118,36 +222,31 @@ header {
   margin-top: 10px;
 }
 
-.col {
-  letter-spacing: -0.01px;
-  color: #666;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  width: 20%;
-  display: inline-block;
-  vertical-align: top;
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
 }
 
-.col {
-  flex-basis: 20%;
-  padding: 0 10px;
-  box-sizing: border-box;
+  .col {
+    width: 19.5%;
+    padding: 0 10px;
+    color: #666;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
 }
+
+
 
 footer {
   background-color: #f2f2f2;
   line-height: 1.66667;
   font-weight: 400;
-  letter-spacing: -0.01px;
   color: #666;
+}
+
+footer a{
+  font-size: 13px;
 }
 
 .footer-nav ul > li:first-child {
@@ -172,33 +271,9 @@ footer {
   font-size: 1px;
 }
 
-.col {
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.01px;
-  color: #666;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  width: 18%;
-  display: inline-block;
-  vertical-align: top;
-}
-
 ol, ul, li {
   list-style: none;
   font-size: 11.94px;
-}
-
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
 }
 
 .footer-nav ul > li:not(:first-child) > a {
