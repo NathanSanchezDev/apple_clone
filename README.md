@@ -1,2 +1,1 @@
-# apple_clone
-for altcademy
+# apple
